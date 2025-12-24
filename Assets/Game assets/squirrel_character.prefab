@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1723428198411864024}
   - component: {fileID: 6597146427508605353}
   - component: {fileID: 4543616341745725187}
+  - component: {fileID: 6367886576409498769}
   m_Layer: 0
   m_Name: squirrel_character
   m_TagString: Untagged
@@ -231,3 +232,33 @@ PolygonCollider2D:
       - {x: -0.79800004, y: -0.34}
       - {x: -0.72200006, y: -0.46}
   m_UseDelaunayMesh: 0
+--- !u!114 &6367886576409498769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5986204586279166523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: c8fb103edc262c5419104a6b2db20343, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: squirrel
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}

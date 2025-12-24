@@ -1,0 +1,55 @@
+{
+    "version": 1,
+    "name": "Mouse_Click_Move",
+    "maps": [
+        {
+            "name": "Menu",
+            "id": "f52e4731-b241-44a4-9750-9d420e52f8f7",
+            "actions": [
+                {
+                    "name": "Mousemove",
+                    "type": "Value",
+                    "id": "b3b1b5f6-6ab3-4e47-8a9c-f99ba0f45fde",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Mouseclick",
+                    "type": "Button",
+                    "id": "354b688a-736a-4157-a91a-2ba1fd414b39",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ed805b88-e692-4a25-bcfc-76a18287868f",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Mousemove",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e66c9304-1a33-43da-bfe4-4ee8e3896dd6",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Mouseclick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

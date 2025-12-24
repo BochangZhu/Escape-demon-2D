@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "char_ctr",
+    "maps": [
+        {
+            "name": "squirrel",
+            "id": "34b12b89-0856-4ecb-a2be-07460ca611be",
+            "actions": [
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "c62930f9-1bea-4b1f-b261-fdb2e7bf7d97",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f9fa00a5-d0b0-49d9-948e-702d364bc678",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
