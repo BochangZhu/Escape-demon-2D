@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2987d287844eb84eab73ccec15eccf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Remove_And_Start
-  sqr_prefab: {fileID: 5986204586279166523, guid: e537585a89d2b4e44b01a888bedeb384, type: 3}
+  sqr_prefab: {fileID: 6423870530162058098, guid: e9126d71a13ef2042b978be90b7e0926, type: 3}
 --- !u!212 &688223266
 SpriteRenderer:
   m_ObjectHideFlags: 0
