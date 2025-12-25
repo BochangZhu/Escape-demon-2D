@@ -11,6 +11,10 @@ public class CharacterControl : MonoBehaviour
 
     [SerializeField]
     private float gravity_scale;
+
+    public GameObject flame;
+
+    private InputAction jumped;
     void Start()
     {
     //     Transform myTransform = gameObject.transform;
@@ -21,17 +25,35 @@ public class CharacterControl : MonoBehaviour
         myRigidbody.gravityScale = gravity_scale; //
         Debug.Log("Initializing myself.");
 
+        flame.SetActive(false); // Flame is off when object is instantiated
+
+        PlayerInput input = GetComponent<PlayerInput>(); // Search for playerinput component
+        jumped = input.actions["Jump"]; // Get the jump action
+
+        jumped.Enable();
+        jumped.performed += ctx => After_Jump();
+        jumped.canceled += ctx => After_Jump_Rel();
+        
+
     //     myPolygonCollider = gameObject.AddComponent<PolygonCollider2D>(); // Add and store PolygonCollider2D
 
     //     name = "squirrel_character"; // Change the name of the character
     }
     
-    private void OnJump(InputValue val)
+    private void After_Jump()
     {
-        Debug.Log("Jump detected");
-        if (val.isPressed)
-        {
-            myRigidbody.linearVelocity = new Vector2(0, 1) * jump_strength;
-        }
+        Debug.Log("Space pressed");
+
+        // Flame appears and jump
+        myRigidbody.linearVelocity = new Vector2(0, 1) * jump_strength;
+        flame.SetActive(true);
+
+    }
+
+    private void After_Jump_Rel()
+    {
+        // When buttom value goes back
+        Debug.Log("Space released");
+        flame.SetActive(false);
     }
 }

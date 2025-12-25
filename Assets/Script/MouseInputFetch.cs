@@ -15,8 +15,10 @@ public class SystemInputFetch : MonoBehaviour
 
     private void OnMouseclick(InputValue val) // If left-mouse is clicked
     {
+        
         if (val.Get<bool>()) // If that signal is a click but not release from click
-        {
+        {   
+            Debug.Log("Click detected");
             clicked?.Invoke(); // Invoke the event for two other scripts to run(one is setActive = false to buttom, two is spawner column and squirrel)
         }
     }
