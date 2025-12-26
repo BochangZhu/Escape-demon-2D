@@ -4,7 +4,7 @@ public class Spawner : MonoBehaviour{
 
 [SerializeField] 
 private GameObject pipe;
-public Transform parent_pipe;
+float timer = 0f;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,16 +15,21 @@ public Transform parent_pipe;
     }
 
     // Update is called once per frame
-    void OnEnable() {
-        parent_pipe = new GameObject("Pipe").transform;
-        GameObject top_pipe = Instantiate(pipe, parent_pipe);
-        top_pipe.name = "top_pipe";
-        GameObject buttom_pipe = Instantiate(pipe, new Vector3(0, -3.94f, 0), Quaternion.identity, parent_pipe);
-        buttom_pipe.name = "buttom_pipe";
-        buttom_pipe.transform.localScale = new Vector3(1.72f, -2.29f, 1.72f);
+    void Start()
+    {
+        Instantiate(pipe);
     }
     void Update()
     {
+        timer += Time.deltaTime;
+        if (timer >= 3f)
+        {
+            Instantiate(pipe);
+            timer = 0f;
+        }
         
+    }
+    private void OnDestroy() {
+        this.enabled = false;
     }
 }

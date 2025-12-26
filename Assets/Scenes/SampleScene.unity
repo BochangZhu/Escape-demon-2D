@@ -390,8 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab85a320e591c5743a949d2ec1334d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  pipe: {fileID: 6043711798312330679, guid: 1042db9845103b34e897bcc34188c337, type: 3}
-  parent_pipe: {fileID: 0}
+  pipe: {fileID: 5216027286140721370, guid: 0a4bde3042c43f84e863de48b41c7cef, type: 3}
 --- !u!4 &1412038430
 Transform:
   m_ObjectHideFlags: 0

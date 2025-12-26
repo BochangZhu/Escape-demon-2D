@@ -112,6 +112,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1584866755290993092, guid: e537585a89d2b4e44b01a888bedeb384, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1584866755290993092, guid: e537585a89d2b4e44b01a888bedeb384, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1584866755290993092, guid: e537585a89d2b4e44b01a888bedeb384, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1584866755290993092, guid: e537585a89d2b4e44b01a888bedeb384, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
       objectReference: {fileID: 0}
@@ -151,10 +163,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1584866755290993092, guid: e537585a89d2b4e44b01a888bedeb384, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1723428198411864024, guid: e537585a89d2b4e44b01a888bedeb384, type: 3}
       propertyPath: flame
       value: 
       objectReference: {fileID: 8004168648949927289}
+    - target: {fileID: 1723428198411864024, guid: e537585a89d2b4e44b01a888bedeb384, type: 3}
+      propertyPath: mass_scale
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723428198411864024, guid: e537585a89d2b4e44b01a888bedeb384, type: 3}
+      propertyPath: gravity_scale
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723428198411864024, guid: e537585a89d2b4e44b01a888bedeb384, type: 3}
+      propertyPath: jump_strength
+      value: 6.35
+      objectReference: {fileID: 0}
     - target: {fileID: 1723428198411864024, guid: e537585a89d2b4e44b01a888bedeb384, type: 3}
       propertyPath: jumped.m_Name
       value: Jumped
