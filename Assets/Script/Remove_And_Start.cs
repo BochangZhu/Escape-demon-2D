@@ -6,6 +6,8 @@ public class Remove_And_Start : MonoBehaviour
     private InputProvider prov;
     public GameObject sqr_prefab;
     private PolygonCollider2D cld;
+
+    public GameObject SP;
     void Awake() {
         cld = gameObject.AddComponent<PolygonCollider2D>(); // Create PolygonCollider2D with outline editted in my sprite editor
         cld.isTrigger = true; // Set is trigger equals to true
@@ -45,7 +47,8 @@ public class Remove_And_Start : MonoBehaviour
         // Since the Menu is dead/disabled, the Keyboard is free.
         // The Squirrel sees the free keyboard and grabs it.
 
-        Instantiate(sqr_prefab);      
+        Instantiate(sqr_prefab); 
+        SP.GetComponent<Spawner>().enabled = true;
 
         // 4. Hide the button visual
         gameObject.SetActive(false);
