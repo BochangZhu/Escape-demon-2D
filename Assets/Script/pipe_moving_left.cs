@@ -12,16 +12,23 @@ private SpriteRenderer buttom_render;
 
 private float easy = 8f;
 
+public float speed = 1f;
+
+
+
 void Awake()
     {   
-        int random_pos = Random.Range(-23,0);
-        transform.position = new Vector3((float)random_pos,0f,0f);
+        // int random_pos = Random.Range(-23,0);
+        // transform.position = new Vector3((float)random_pos,0f,0f); //random position to visualize the height difference(test only)
+        transform.position = new Vector3(10f, 0f, 0f);
+        top_pipe.transform.position = new Vector3(10f, 4f, 0f);
+        buttom_pipe.transform.position = new Vector3(10f, -4f, 0f);
     }
 void OnEnable()
     {
-        float random_top = Random.Range(50f * easy, 110f * easy);
+        float random_top = Random.Range(2.5f * easy, 100f * easy);
 
-        float random_buttom = Random.Range(50f * easy, 110f * easy);
+        float random_buttom = Random.Range(2.5f * easy, 100f * easy);
 
         Debug.Log($"random_top = {random_top}\n random_buttom = {random_buttom}");
 
@@ -71,5 +78,12 @@ private void random_pipe_height(float top_cut, float buttom_cut)
     }
     
         
-    
+    void Update()
+    {
+        transform.Translate(Vector3.left * speed * Time.deltaTime);
+        if (transform.position.x <= -15.8f){
+            Destroy(gameObject);
+        }
+    }
+
 }

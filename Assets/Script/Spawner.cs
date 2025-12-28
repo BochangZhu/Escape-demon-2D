@@ -6,6 +6,9 @@ public class Spawner : MonoBehaviour{
 private GameObject pipe;
 float timer = 0f;
 
+private float sp_freq;
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -17,15 +20,19 @@ float timer = 0f;
     // Update is called once per frame
     void Start()
     {
-        Instantiate(pipe);
+        GameObject temp = Instantiate(pipe);
+        temp.tag = "pipe";
+        sp_freq = Random.Range(0.75f, 3f);
     }
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer >= 3f)
+        if (timer >= sp_freq)
         {
-            Instantiate(pipe);
+            GameObject temp = Instantiate(pipe);
+            temp.tag = "pipe";
             timer = 0f;
+            sp_freq = Random.Range(0.75f, 3f);
         }
         
     }
