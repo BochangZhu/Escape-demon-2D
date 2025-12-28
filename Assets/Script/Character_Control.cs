@@ -56,4 +56,5 @@ public class CharacterControl : MonoBehaviour
         Debug.Log("Space released");
         flame.SetActive(false);
     }
+
 }
