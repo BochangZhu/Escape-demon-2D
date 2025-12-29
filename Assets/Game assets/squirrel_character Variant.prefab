@@ -203,6 +203,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: squirrel_character Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8359431488141943844, guid: e537585a89d2b4e44b01a888bedeb384, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
