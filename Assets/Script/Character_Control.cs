@@ -15,6 +15,8 @@ public class CharacterControl : MonoBehaviour
     public GameObject flame;
 
     private InputAction jumped;
+
+    private PlayerInput input;
     void Start()
     {
     //     Transform myTransform = gameObject.transform;
@@ -27,12 +29,12 @@ public class CharacterControl : MonoBehaviour
 
         flame.SetActive(false); // Flame is off when object is instantiated
 
-        PlayerInput input = GetComponent<PlayerInput>(); // Search for playerinput component
+        input = GetComponent<PlayerInput>(); // Search for playerinput component
         jumped = input.actions["Jump"]; // Get the jump action
 
         jumped.Enable();
-        jumped.performed += ctx => After_Jump();
-        jumped.canceled += ctx => After_Jump_Rel();
+        jumped.performed += After_Jump;
+        jumped.canceled += After_Jump_Rel;
         
 
     //     myPolygonCollider = gameObject.AddComponent<PolygonCollider2D>(); // Add and store PolygonCollider2D
@@ -40,7 +42,7 @@ public class CharacterControl : MonoBehaviour
     //     name = "squirrel_character"; // Change the name of the character
     }
     
-    private void After_Jump()
+    private void After_Jump(InputAction.CallbackContext ctx)
     {
         // Flame appears and jump
         myRigidbody.linearVelocity = new Vector2(0, 1) * jump_strength;
@@ -48,10 +50,18 @@ public class CharacterControl : MonoBehaviour
 
     }
 
-    private void After_Jump_Rel()
+    private void After_Jump_Rel(InputAction.CallbackContext ctx)
     {
         // When buttom value goes back
         flame.SetActive(false);
+    }
+
+    void OnDestroy()
+    {
+        jumped.performed -= After_Jump;
+        jumped.canceled -= After_Jump_Rel;
+        jumped.Disable();
+        input.DeactivateInput();
     }
 
 }

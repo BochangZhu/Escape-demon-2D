@@ -40,7 +40,7 @@ private float sp_freq;
         }
         
     }
-    private void OnDestroy() {
+    public void disable_sp() {
         this.enabled = false;
     }
 }

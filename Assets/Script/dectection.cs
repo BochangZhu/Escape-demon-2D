@@ -5,13 +5,20 @@ using UnityEngine.InputSystem;
 
 public class detection: MonoBehaviour
 {
-    public GameObject sp;
+    public Spawner sp;
     public PolygonCollider2D cld;
     private PlayerInput my_input;
     private Rigidbody2D my_rigid;
 
+    public GameObject start_prefab;
+
+    public InputProvider system_input;
+
+
+
     void Start(){
-        sp = GameObject.Find("Pipe_Spawner");   
+        system_input = FindFirstObjectByType<InputProvider>();
+        sp = FindFirstObjectByType<Spawner>();   
         my_input = gameObject.GetComponent<PlayerInput>();// Get the playerinput
         my_rigid = gameObject.GetComponent<Rigidbody2D>();
         cld = gameObject.GetComponent<PolygonCollider2D>();
@@ -28,7 +35,7 @@ public class detection: MonoBehaviour
 
         score_man.instance.score_reset();
         
-        Destroy(sp);
+        sp.disable_sp();
 
         my_input.DeactivateInput();
 
@@ -47,5 +54,9 @@ public class detection: MonoBehaviour
         }
     }
 
-
+    void OnDestroy()
+    {
+        system_input.enabled = true;
+        Instantiate(start_prefab);
+    }
 }

@@ -223,6 +223,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1584866755290993092, guid: e537585a89d2b4e44b01a888bedeb384, type: 3}
   m_PrefabInstance: {fileID: 735610029214990665}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5938610146611484120 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6367886576409498769, guid: e537585a89d2b4e44b01a888bedeb384, type: 3}
+  m_PrefabInstance: {fileID: 735610029214990665}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6423870530162058098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
 --- !u!1 &6423870530162058098 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5986204586279166523, guid: e537585a89d2b4e44b01a888bedeb384, type: 3}
@@ -242,3 +253,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::detection
   sp: {fileID: 0}
   cld: {fileID: 0}
+  start_prefab: {fileID: 1430635220539769625, guid: 92a079052a9079f49991a4c7fb3cf33b, type: 3}
+  myinput: {fileID: 5938610146611484120}

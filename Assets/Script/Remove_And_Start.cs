@@ -9,8 +9,8 @@ public class Remove_And_Start : MonoBehaviour
 
     public GameObject SP;
     void Awake() {
+        SP = GameObject.Find("Pipe_Spawner");
         prov = FindFirstObjectByType<InputProvider>(); // Use FFOBT fucntion to get the script type object(not a game object)
-        
         cld = gameObject.AddComponent<PolygonCollider2D>(); // Create PolygonCollider2D with outline editted in my sprite editor
         cld.isTrigger = true; // Set is trigger equals to true
         sensor();
@@ -57,7 +57,7 @@ public class Remove_And_Start : MonoBehaviour
         SP.GetComponent<Spawner>().enabled = true;
 
         // 4. Hide the button visual
-        gameObject.SetActive(false);
+        Destroy(gameObject);
 
     }
 
