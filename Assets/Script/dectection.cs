@@ -25,6 +25,8 @@ public class detection: MonoBehaviour
     private void gameover()
     {
         Debug.Log("GG");
+
+        score_man.instance.score_reset();
         
         Destroy(sp);
 

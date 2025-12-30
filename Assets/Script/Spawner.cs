@@ -22,6 +22,8 @@ private float sp_freq;
     {
         GameObject temp = Instantiate(pipe);
         temp.tag = "pipe";
+        GameObject top_pipe = temp.transform.Find("top_pipe").gameObject;
+        top_pipe.tag = "pipe";
         sp_freq = Random.Range(0.75f, 3f);
     }
     void Update()
@@ -31,6 +33,8 @@ private float sp_freq;
         {
             GameObject temp = Instantiate(pipe);
             temp.tag = "pipe";
+            GameObject top_pipe = temp.transform.Find("top_pipe").gameObject;
+            top_pipe.tag = "pipe";
             timer = 0f;
             sp_freq = Random.Range(0.75f, 3f);
         }

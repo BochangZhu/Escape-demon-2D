@@ -42,8 +42,6 @@ public class CharacterControl : MonoBehaviour
     
     private void After_Jump()
     {
-        Debug.Log("Space pressed");
-
         // Flame appears and jump
         myRigidbody.linearVelocity = new Vector2(0, 1) * jump_strength;
         flame.SetActive(true);
@@ -53,7 +51,6 @@ public class CharacterControl : MonoBehaviour
     private void After_Jump_Rel()
     {
         // When buttom value goes back
-        Debug.Log("Space released");
         flame.SetActive(false);
     }
 
