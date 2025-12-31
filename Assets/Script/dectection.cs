@@ -35,15 +35,20 @@ public class detection: MonoBehaviour
 
         score_man.instance.score_reset();
         
-        sp.disable_sp();
+        sp.enabled = false;
 
         my_input.DeactivateInput();
 
         GameObject[] objToDestroy = GameObject.FindGameObjectsWithTag("pipe");
         foreach (GameObject obj in objToDestroy)
         {
-            Destroy(obj);
+            if (obj.GetComponent<Spawner>() == null)
+            {
+                Destroy(obj);
+            }
         }
+        system_input.enabled = true;
+        Instantiate(start_prefab);
         Destroy(gameObject);
     }
     void Update()
@@ -54,9 +59,4 @@ public class detection: MonoBehaviour
         }
     }
 
-    void OnDestroy()
-    {
-        system_input.enabled = true;
-        Instantiate(start_prefab);
-    }
 }

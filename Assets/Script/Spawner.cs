@@ -14,6 +14,8 @@ private float sp_freq;
     void Awake()
     {
         this.enabled = false;
+        DontDestroyOnLoad(gameObject);
+
 
     }
 
@@ -40,7 +42,5 @@ private float sp_freq;
         }
         
     }
-    public void disable_sp() {
-        this.enabled = false;
-    }
+
 }

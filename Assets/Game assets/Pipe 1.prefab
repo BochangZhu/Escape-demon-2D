@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4483477027592299607}
   - component: {fileID: 5497329745629745867}
   - component: {fileID: 8621417654839398098}
-  - component: {fileID: 3165749556987323401}
   m_Layer: 0
   m_Name: top_pipe
   m_TagString: Untagged
@@ -148,21 +147,6 @@ PolygonCollider2D:
       - {x: -0.57000005, y: -1.07}
       - {x: 0.57000005, y: -1.07}
   m_UseDelaunayMesh: 0
---- !u!114 &3165749556987323401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4407539049789961094}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fcd9a956445b2242a7634bd2f97ed49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::top_detection
-  main_char: {fileID: 6423870530162058098, guid: e9126d71a13ef2042b978be90b7e0926, type: 3}
-  sp: {fileID: 0}
-  cld: {fileID: 0}
 --- !u!1 &5216027286140721370
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +207,6 @@ GameObject:
   - component: {fileID: 2218065993925916432}
   - component: {fileID: 4428344237311438789}
   - component: {fileID: 5167125812717667613}
-  - component: {fileID: 760229168240363494}
   m_Layer: 0
   m_Name: buttom_pipe
   m_TagString: Untagged
@@ -360,18 +343,3 @@ PolygonCollider2D:
       - {x: -0.57000005, y: -1.07}
       - {x: 0.57000005, y: -1.07}
   m_UseDelaunayMesh: 0
---- !u!114 &760229168240363494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6317520871298495158}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f5c504a59c8bb441bda65cafb909c4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::buttom_detection
-  main_char: {fileID: 6423870530162058098, guid: e9126d71a13ef2042b978be90b7e0926, type: 3}
-  sp: {fileID: 0}
-  cld: {fileID: 0}

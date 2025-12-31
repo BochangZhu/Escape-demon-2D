@@ -42,15 +42,7 @@ public class Remove_And_Start : MonoBehaviour
         // Unsubscribe from listener list
         prov.clicked -= spawn_char;
 
-        // 2. DISABLE the Menu Input FIRST
-        // This forces it to drop the Keyboard immediately.
         prov.enabled = false; 
-        // OR just destroy it now if you don't need data from it anymore
-        // Destroy(prov.gameObject); 
-
-        // 3. NOW Spawn the Squirrel
-        // Since the Menu is dead/disabled, the Keyboard is free.
-        // The Squirrel sees the free keyboard and grabs it.
 
         GameObject temp = Instantiate(sqr_prefab);
         temp.name = "char";
